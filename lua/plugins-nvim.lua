@@ -107,7 +107,29 @@ return {
     end
   },
 
+  --lightline
+  {'itchyny/lightline.vim',
+    config = function ()
+      vim.cmd([[
+          let g:lightline={'colorscheme': 'one',}
+      ]])
+    end
+  },
 
+  {
+   "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+
+    config = function()
+        vim.g.loaded_netrw = 1
+        vim.g.loaded_netrwPlugin = 1
+        require("config-nvim.nvim-tree")
+    end,
+},
 
 
 }
