@@ -5,6 +5,24 @@ vim.g.maplocalleader=' '
 
 vim.opt.termguicolors = true
 
+
+-- This is for 
+-- local path = os.getenv("PWD") .. "/lua"
+
+-- local core = path .. "/core"
+-- local plugins = path .. "/plugins"
+-- local  misc = path .. "/misc"
+
+
+
+
+
+
+
+
+
+
+
 --Gloabl aliases
 require ("helpers/globals")
 

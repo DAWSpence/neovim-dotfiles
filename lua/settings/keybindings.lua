@@ -1,10 +1,12 @@
 --BASIC KEYBINDINGS--
 
 --Better window navigation
-nm('<C-h>','<C-w><C-h>')
-nm('<C-l>','<C-w><C-l>')
-nm('<C-j>','<C-w><C-j>')
-nm('<C-k>','<C-w><C-k>')
+vim.keymap.set('n','<C-h>','<C-w><C-h>', {noremap=true, silent=true})
+vim.keymap.set('n','<C-l>','<C-w><C-l>' {noremap=true, silent=true})
+vim.keymap.set('n','<C-j>','<C-w><C-j>' {noremap=true, silent=true})
+vim.keymap.set('n','<C-k>','<C-w><C-k>' {noremap=true, silent=true})
+
+
 
 --Clear highlights with esc
 nm('<Esc>','<cmd>nohlsearch<CR>')

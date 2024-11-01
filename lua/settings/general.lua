@@ -7,7 +7,6 @@ cmd[[autocmd FileType * setlocal formatoptions-=cro]]
 --Keep buffer sizes consistent
 cmd[[autocmd VimResized * wincmd =]]
 
-
 --Base settings
 
 opt.termguicolors=true
@@ -57,4 +56,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
       vim.highlight.on_yank()
     end,
   })
+
 -- vim: tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=1
