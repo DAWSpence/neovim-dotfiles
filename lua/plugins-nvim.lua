@@ -1,13 +1,12 @@
 return {
 
-  --Catppuccin  
-  {
-    "catppuccin/nvim", 
-    name = "catppuccin",
-    config = function()
-        require("config-nvim.catppuccin")
-    end
-  },
+  --Gruvbox  
+  { "ellisonleao/gruvbox.nvim",
+      priority = 1000,
+      config = function()
+        require("plugins.gruvbox")
+      end
+  }
 
   -- Mason  
   {

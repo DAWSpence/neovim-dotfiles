@@ -1,47 +1,31 @@
---Map leaders
-vim.g.mapleader=' '
+if vim.g.vscode then
 
-vim.g.maplocalleader=' '
+  local vscode = require('vscode')
+  require("vscode.keybindings")
 
-vim.opt.termguicolors = true
+else
 
+  --Map leaders
+  vim.g.mapleader=' '
+  vim.g.maplocalleader=' '
 
--- This is for 
--- local path = os.getenv("PWD") .. "/lua"
-
--- local core = path .. "/core"
--- local plugins = path .. "/plugins"
--- local  misc = path .. "/misc"
-
-
-
+  --Default to a barable colorscheme if we dont have gui colors
+  if not vim.opt.termguicolors then
+    vim.cmd("colorscheme slate")
+  end
 
 
+  require ("core/general")
+
+  require ('core/keybindings')
+
+  require ("lazy-bootstrap")
+
+  require("lazy").setup({
+    require("plugins-nvim"),
+  })
 
 
+  -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0
 
-
-
-
---Gloabl aliases
-require ("helpers/globals")
-
---Keybinding functions
-require ('helpers/keyboard')
-
--- General settings
-require ("settings/general")
-
--- Bootsraping plugin manager
-require ("lazy-bootstrap")
-
--- Plugin management 
-require("lazy").setup({
-  require("plugins-nvim"),
-  require("plugins-vim")
-})
-
--- Keybindings
-require ("settings/keybindings")
-
--- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0
+end
