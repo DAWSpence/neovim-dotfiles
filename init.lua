@@ -14,9 +14,9 @@ else
   end
 
 
-  require("core/general")
+  require("core.general")
 
-  require('core/keybindings')
+  require('core.keybindings')
 
   require("lazy-bootstrap")
 

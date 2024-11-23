@@ -60,7 +60,7 @@ vim.opt.splitright = true
 -- Better completion experience
 vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
-vim.o.completeopt= "menuone, noselect"
+vim.o.completeopt= "menuone,noselect"
 
 -- Search
 vim.opt.inccommand = 'split'

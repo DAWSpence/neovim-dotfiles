@@ -6,7 +6,7 @@ return {
       config = function()
         require("plugins.gruvbox")
       end
-  }
+  },
 
   -- Mason  
   {
@@ -17,7 +17,7 @@ return {
       "neovim/nvim-lspconfig",
     },
     config = function()
-      require "config-nvim.mason"
+      require "plugins.mason"
     end
   },
 
@@ -26,7 +26,7 @@ return {
   "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
-      require("config-nvim.which-key")
+      require("plugins.which-key")
     end,
     init = function()
       vim.o.timeout = true
@@ -44,7 +44,7 @@ return {
       "ahmedkhalf/project.nvim",
     },
     config = function()
-      require "config-nvim.telescope"
+      require "plugins.telescope"
     end
   },
 
@@ -63,7 +63,7 @@ return {
       'rafamadriz/friendly-snippets',
     },
     config = function()
-      require "config-nvim.cmp"
+      require "plugins.cmp"
     end
   },
 
@@ -72,7 +72,7 @@ return {
     'lewis6991/gitsigns.nvim',
     lazy = false,
     config = function()
-      require "config-nvim.gitsigns"
+      require "plugins.gitsigns"
     end
   },
 
@@ -84,7 +84,7 @@ return {
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      require "config-nvim.treesitter"
+      require "plugins.treesitter"
     end
   },
 
@@ -93,7 +93,7 @@ return {
     'echasnovski/mini.nvim',
     version = false,
     config = function ()
-      require("config-nvim.mini")
+      require("plugins.mini")
     end
   },
 
@@ -102,7 +102,7 @@ return {
   {'akinsho/toggleterm.nvim',
     version = "*",
     config = function ()
-      require ("config-nvim.toggleterm")
+      require ("plugins.toggleterm")
     end
   },
 
@@ -126,7 +126,7 @@ return {
     config = function()
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
-        require("config-nvim.nvim-tree")
+        require("plugins.nvim-tree")
     end,
 },
 
