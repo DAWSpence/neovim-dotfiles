@@ -4,7 +4,6 @@ if vim.g.vscode then
   require("vscode.keybindings")
 
 else
-
   --Map leaders
   vim.g.mapleader=' '
   vim.g.maplocalleader=' '
@@ -15,11 +14,11 @@ else
   end
 
 
-  require ("core/general")
+  require("core/general")
 
-  require ('core/keybindings')
+  require('core/keybindings')
 
-  require ("lazy-bootstrap")
+  require("lazy-bootstrap")
 
   require("lazy").setup({
     require("plugins-nvim"),
