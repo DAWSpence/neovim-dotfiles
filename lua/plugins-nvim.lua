@@ -34,6 +34,20 @@ return {
     end,
 },
 
+
+
+-- Hydra
+{
+  "anuvyklack/hydra.nvim",
+  dependencies={
+    'nvim-tree/nvim-tree.lua',
+  },
+    config = function()
+      require("plugins.hydra")
+    end,
+},
+
+
   -- Telescope  
   {
     'nvim-telescope/telescope.nvim',
@@ -57,7 +71,6 @@ return {
       'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
-      -- 'hrsh7th/cmp-emoji',
       'hrsh7th/cmp-nvim-lsp-signature-help',
       'hrsh7th/cmp-nvim-lua',
       'rafamadriz/friendly-snippets',
